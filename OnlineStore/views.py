@@ -28,7 +28,7 @@ def edit(request, id):
             Product1.save()
             return HttpResponseRedirect("/")
         else:
-            return render(request, "edit.html", {"Product1": Product})
+            return render(request, "Product/edit.html", {"Product1": Product})
     except Product.DoesNotExist:
         return HttpResponseNotFound("<h2>Товар не найден</h2>")
 
